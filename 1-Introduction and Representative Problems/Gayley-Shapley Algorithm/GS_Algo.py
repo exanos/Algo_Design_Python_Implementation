@@ -13,7 +13,6 @@ lv=0
 itera=0
 
 while len(Men_List)!=0:
-
     
     m=Men_List[0]
     w=M_Pref[m][0]
@@ -22,9 +21,8 @@ while len(Men_List)!=0:
         Matched_W.append(w)
         Matched_M.append(m)
         Men_List.remove(m)
-        p=Wmn_List.index(w)
-        Wmn_List.pop(p)
-    elif w in Matched_W:
+        Wmn_List.remove(w)
+    else:
         for i in Matching:
             if w in i:
                 m1=i[0]
